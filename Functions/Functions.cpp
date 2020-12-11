@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
+#include <tuple>
+#include "decl.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::tuple user_inputs{ get_input ()};
+	std::cout << std::get<0>(user_inputs) << std::get<2>(user_inputs) << std::get<1>(user_inputs) << " = " << getArithmeticFunction (std::get<2>(user_inputs))(std::get<0>(user_inputs), std::get<1>(user_inputs)) << std::endl;
 }
 
 
